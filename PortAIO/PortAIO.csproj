@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BBF3B83-0921-40D0-A42D-FCD4D7D8F98D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PortAIO</RootNamespace>
+    <AssemblyName>PortAIO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PortAIO.Init</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EloBuddy">
+      <HintPath>..\..\..\..\AppData\Roaming\EloBuddy\Addons\Libraries\EloBuddy.dll</HintPath>
+    </Reference>
+    <Reference Include="EloBuddy.Sandbox">
+      <HintPath>..\..\..\..\AppData\Roaming\EloBuddy\Addons\Libraries\EloBuddy.Sandbox.dll</HintPath>
+    </Reference>
+    <Reference Include="EloBuddy.SDK">
+      <HintPath>..\..\..\..\AppData\Roaming\EloBuddy\Addons\Libraries\EloBuddy.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\AppData\Roaming\EloBuddy\Addons\Libraries\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=2.6.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\AppData\Roaming\EloBuddy\Addons\Libraries\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=2.6.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\AppData\Roaming\EloBuddy\Addons\Libraries\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Champion\Aatrox\Program.cs" />
+    <Compile Include="Champion\Ahri\Program.cs" />
+    <Compile Include="Champion\Akali\Program.cs" />
+    <Compile Include="Champion\Alistar\Program.cs" />
+    <Compile Include="Champion\Amumu\Program.cs" />
+    <Compile Include="Champion\Anivia\Program.cs" />
+    <Compile Include="Champion\Annie\Program.cs" />
+    <Compile Include="Champion\Ashe\Program.cs" />
+    <Compile Include="Champion\Azir\Program.cs" />
+    <Compile Include="Champion\Bard\Program.cs" />
+    <Compile Include="Champion\Blitzcrank\Program.cs" />
+    <Compile Include="Champion\Brand\Program.cs" />
+    <Compile Include="Champion\Braum\Program.cs" />
+    <Compile Include="Champion\Caitlyn\Program.cs" />
+    <Compile Include="Init.cs" />
+    <Compile Include="Libraries\FreshBooster\FreshCommon.cs" />
+    <Compile Include="Libraries\FreshBooster\HpBarIndicator.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonChamp.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonCore.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonDamageDrawing.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonDisableAA.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonEvolveUltimate.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonForceUltimate.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonMenu.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonOrbwalkComplementation.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonSpell.cs" />
+    <Compile Include="Libraries\KoreanCommon\CommonSpells.cs" />
+    <Compile Include="Libraries\KoreanCommon\KoreanPrediction.cs" />
+    <Compile Include="Libraries\KoreanCommon\KoreanPredictionTypes.cs" />
+    <Compile Include="Libraries\KoreanCommon\PredictionItem.cs" />
+    <Compile Include="Libraries\KoreanCommon\SecureJungleMobs.cs" />
+    <Compile Include="Libraries\Orbwalker\Notifications.cs" />
+    <Compile Include="Libraries\Orbwalker\Notifications\INotification.cs" />
+    <Compile Include="Libraries\Orbwalker\Notifications\Notification.cs" />
+    <Compile Include="Libraries\TheBrand\BrandCombo.cs" />
+    <Compile Include="Libraries\TheBrand\BrandE.cs" />
+    <Compile Include="Libraries\TheBrand\BrandQ.cs" />
+    <Compile Include="Libraries\TheBrand\BrandR.cs" />
+    <Compile Include="Libraries\TheBrand\BrandW.cs" />
+    <Compile Include="Libraries\TheBrand\Commons\ComboSystem\ComboProvider.cs" />
+    <Compile Include="Libraries\TheBrand\Commons\ComboSystem\Skill.cs" />
+    <Compile Include="Libraries\TheBrand\Commons\Extensions.cs" />
+    <Compile Include="Libraries\UnderratedHelper\CombatHelper.cs" />
+    <Compile Include="Libraries\UnderratedHelper\DrawHelper.cs" />
+    <Compile Include="Libraries\UnderratedHelper\DynamicInitializer.cs" />
+    <Compile Include="Libraries\UnderratedHelper\Environment.cs" />
+    <Compile Include="Libraries\UnderratedHelper\IncomingDamage.cs" />
+    <Compile Include="Libraries\UnderratedHelper\SkillShot\Collision.cs" />
+    <Compile Include="Libraries\UnderratedHelper\SkillShot\Geometry.cs" />
+    <Compile Include="Libraries\UnderratedHelper\SkillShot\Skillshot.cs" />
+    <Compile Include="Libraries\UnderratedHelper\SkillShot\SkillshotDetector.cs" />
+    <Compile Include="Libraries\UnderratedHelper\SkillShot\SpellDatabase.cs" />
+    <Compile Include="Libraries\UnderratedHelper\SkillShot\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Libraries\AmumuSharp\Helper.cs" />
+    <Compile Include="Libraries\BrianSharp\Helper.cs" />
+    <Compile Include="Libraries\DZAhri\Helper.cs" />
+    <Compile Include="Libraries\OKTW - Core\Activator.cs" />
+    <Compile Include="Libraries\OKTW - Core\AutoLvlUp.cs" />
+    <Compile Include="Libraries\OKTW - Core\MissileReturn.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWdash.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWdraws.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWlab.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWtracker.cs" />
+    <Compile Include="Libraries\OKTW - Core\OktwTs.cs" />
+    <Compile Include="Libraries\OKTW - Core\OKTWward.cs" />
+    <Compile Include="Libraries\Orbwalker\AntiGapcloser.cs" />
+    <Compile Include="Libraries\Orbwalker\Circle.cs" />
+    <Compile Include="Libraries\Orbwalker\Config.cs" />
+    <Compile Include="Libraries\Orbwalker\Cursor.cs" />
+    <Compile Include="Libraries\Orbwalker\CustomEvents.cs" />
+    <Compile Include="Libraries\Orbwalker\Damage.cs" />
+    <Compile Include="Libraries\Orbwalker\Dash.cs" />
+    <Compile Include="Libraries\Orbwalker\EnumerableExtensions.cs" />
+    <Compile Include="Libraries\Orbwalker\GamePacket.cs" />
+    <Compile Include="Libraries\Orbwalker\Geometry.cs" />
+    <Compile Include="Libraries\Orbwalker\HealthPrediction.cs" />
+    <Compile Include="Libraries\Orbwalker\HeroManager.cs" />
+    <Compile Include="Libraries\Orbwalker\Interrupter.cs" />
+    <Compile Include="Libraries\Orbwalker\Interrupter2.cs" />
+    <Compile Include="Libraries\Orbwalker\ItemData.cs" />
+    <Compile Include="Libraries\Orbwalker\Items.cs" />
+    <Compile Include="Libraries\Orbwalker\Keys.cs" />
+    <Compile Include="Libraries\Orbwalker\LastCastedSpell.cs" />
+    <Compile Include="Libraries\Orbwalker\MasteryData.cs" />
+    <Compile Include="Libraries\Orbwalker\MEC.cs" />
+    <Compile Include="Libraries\Orbwalker\MinionManager.cs" />
+    <Compile Include="Libraries\Orbwalker\NativeMethods.cs" />
+    <Compile Include="Libraries\Orbwalker\OnValueChangeEventArgs.cs" />
+    <Compile Include="Libraries\Orbwalker\Orbwalking.cs" />
+    <Compile Include="Libraries\Orbwalker\Packet.cs" />
+    <Compile Include="Libraries\Orbwalker\Prediction.cs" />
+    <Compile Include="Libraries\Orbwalker\Render.cs" />
+    <Compile Include="Libraries\Orbwalker\Spell.cs" />
+    <Compile Include="Libraries\Orbwalker\StringList.cs" />
+    <Compile Include="Libraries\Orbwalker\Utility.cs" />
+    <Compile Include="Libraries\Orbwalker\Utils.cs" />
+    <Compile Include="Libraries\Orbwalker\WindowsMessages.cs" />
+    <Compile Include="Libraries\Orbwalker\WndEventComposition.cs" />
+    <Compile Include="Libraries\SCommon\Damage\AutoAttack.cs" />
+    <Compile Include="Libraries\SCommon\Damage\Prediction.cs" />
+    <Compile Include="Libraries\SCommon\Database\Data.cs" />
+    <Compile Include="Libraries\SCommon\Database\Enumarations.cs" />
+    <Compile Include="Libraries\SCommon\Database\SpellDatabase.cs" />
+    <Compile Include="Libraries\SCommon\Database\Structures.cs" />
+    <Compile Include="Libraries\SCommon\Evade\Evader.cs" />
+    <Compile Include="Libraries\SCommon\Evade\ObjectPool.cs" />
+    <Compile Include="Libraries\SCommon\Evade\TargetedSpellDetector.cs" />
+    <Compile Include="Libraries\SCommon\Evade\TargetedSpellEvader.cs" />
+    <Compile Include="Libraries\SCommon\Helpers\SoldierMgr.cs" />
+    <Compile Include="Libraries\SCommon\Maths\ClipperWrapper.cs" />
+    <Compile Include="Libraries\SCommon\Maths\Geometry.cs" />
+    <Compile Include="Libraries\SCommon\MenuUtils\MenuLanguage.cs" />
+    <Compile Include="Libraries\SCommon\Orbwalking\ConfigMenu.cs" />
+    <Compile Include="Libraries\SCommon\Orbwalking\Drawings.cs" />
+    <Compile Include="Libraries\SCommon\Orbwalking\Events.cs" />
+    <Compile Include="Libraries\SCommon\Orbwalking\Orbwalker.cs" />
+    <Compile Include="Libraries\SCommon\Orbwalking\Utility.cs" />
+    <Compile Include="Libraries\SCommon\Packet\PacketDebug.cs" />
+    <Compile Include="Libraries\SCommon\Packet\PacketHandler.cs" />
+    <Compile Include="Libraries\SCommon\PluginBase\Champion.cs" />
+    <Compile Include="Libraries\SCommon\PluginBase\IChampion.cs" />
+    <Compile Include="Libraries\SCommon\TS\ConfigMenu.cs" />
+    <Compile Include="Libraries\SCommon\TS\TargetSelector.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\Cache.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\HealthPrediction.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\OktwCommon.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\Orbwalking.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\PredictionOktw.cs" />
+    <Compile Include="Libraries\Sebby-OKTW\Program.cs" />
+    <Compile Include="Libraries\SPrediction\ArcPrediction.cs" />
+    <Compile Include="Libraries\SPrediction\CirclePrediction.cs" />
+    <Compile Include="Libraries\SPrediction\ClipperWrapper.cs" />
+    <Compile Include="Libraries\SPrediction\Collision.cs" />
+    <Compile Include="Libraries\SPrediction\ConePrediction.cs" />
+    <Compile Include="Libraries\SPrediction\ConfigMenu.cs" />
+    <Compile Include="Libraries\SPrediction\Drawings.cs" />
+    <Compile Include="Libraries\SPrediction\Geometry.cs" />
+    <Compile Include="Libraries\SPrediction\LinePrediction.cs" />
+    <Compile Include="Libraries\SPrediction\Obj_AI_HeroExtensions.cs" />
+    <Compile Include="Libraries\SPrediction\PathTracker.cs" />
+    <Compile Include="Libraries\SPrediction\Prediction.cs" />
+    <Compile Include="Libraries\SPrediction\RingPrediction.cs" />
+    <Compile Include="Libraries\SPrediction\SpellExtensions.cs" />
+    <Compile Include="Libraries\SPrediction\StasisPrediction.cs" />
+    <Compile Include="Libraries\SPrediction\Utility.cs" />
+    <Compile Include="Libraries\SPrediction\VectorPrediction.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Entry.cs" />
+    <Compile Include="Utility\ElUtilitySuite\IPlugin.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\Defensive.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\Item.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\Offensive2.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\OffensiveItems\Botrk.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\OffensiveItems\Cutlass.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\OffensiveItems\FrostQueen.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\OffensiveItems\Hextech.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\OffensiveItems\Hydra.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\OffensiveItems\Tiamat.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\OffensiveItems\TitanicHydra.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\OffensiveItems\Youmuu.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\Potions.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Items\Zhonya.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Summoners\Barrier.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Summoners\Cleanse.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Summoners\Heal.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Summoners\Ignite.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Summoners\Mark.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Summoners\Smite.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Trackers\JungleTracker.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Trackers\RecallTracker.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Utility\AntiStealth.cs" />
+    <Compile Include="Utility\ElUtilitySuite\Utility\UltimateLeveler.cs" />
+    <Compile Include="Utility\Loader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\denymouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mouse2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
